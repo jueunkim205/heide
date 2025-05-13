@@ -6,11 +6,17 @@
   padding: 0;
 }
 
-.wrap {
-  box-sizing: border-box;
+/* 공통 */
+
+:root {
+  font-size: 10px;
+  --maincolor: #009ee3;
+  /* Faroese Blue */
+  --primary1: #6B8E23;
+  /* Velvety Green */
+  --primary2: #5C7259;
 }
 
-/* 공통 */
 ul {
   list-style: none;
 }
@@ -20,6 +26,15 @@ a {
   color: #fff;
 }
 
+.wrap {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+
+/*************** HEADER ***************/
+
+
 header {
   position: fixed;
   width: 100%;
@@ -28,16 +43,13 @@ header {
   z-index: 10;
 }
 
-.wrap {
-  font-family: "Inter", sans-serif;
-  box-sizing: border-box;
+header .mainMenu{
+  display: flex;
+  border: 1px solid #000;
+  font-size: 3rem;
+  width: ;
 }
 
-:root {
-  font-size: 10px;
-  --maincolor: #009ee3;
-  /* Faroese Blue */
-  --primary1: #6B8E23;
-  /* Velvety Green */
-  --primary2: #5C7259;
+header .subMenu{
+  display: flex;
 }

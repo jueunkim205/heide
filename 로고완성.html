@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heide-style Logo Animation (3줄)</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: sans-serif;
+    }
+
+    .logo {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .logo-line {
+      display: flex;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+      line-height: 2.2rem;
+    }
+
+    .logo-line span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      opacity: 1;
+      transform: translateY(0);
+      display: inline-block;
+    }
+
+    .fade {
+      animation: fadeOutUp 0.8s forwards;
+    }
+
+    @keyframes fadeOutUp {
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="logo" id="logo">
+  <!-- HEIDE (고정) -->
+  <div class="logo-line">
+    <span>H</span><span>E</span><span>I</span><span>D</span><span>E</span>
+  </div>
+
+  <!-- 1줄: MUSEUM -->
+  <div class="logo-line fade-group">
+    <span class="fade">M</span><span class="fade">U</span><span class="fade">S</span><span class="fade">E</span><span class="fade">U</span><span class="fade">M</span>
+  </div>
+
+  <!-- 2줄: OF MODERN -->
+  <div class="logo-line fade-group">
+    <span class="fade">O</span><span class="fade">F</span>
+    <span class="fade">M</span><span class="fade">O</span><span class="fade">D</span><span class="fade">E</span><span class="fade">R</span><span class="fade">N</span>
+  </div>
+
+  <!-- 3줄: ART -->
+  <div class="logo-line fade-group">
+    <span class="fade">A</span><span class="fade">R</span><span class="fade">T</span>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const fadingSpans = Array.from(document.querySelectorAll('.fade-group .fade'));
+
+    // 무작위 섞기 (Fisher-Yates)
+    for (let i = fadingSpans.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [fadingSpans[i], fadingSpans[j]] = [fadingSpans[j], fadingSpans[i]];
+    }
+
+    // 순서대로 delay 부여
+    fadingSpans.forEach((span, i) => {
+      const delay = i * 100; // 0.1초 간격
+      span.style.animationDelay = `${delay}ms`;
+    });
+  });
+</script>
+
+</body>
+</html>
