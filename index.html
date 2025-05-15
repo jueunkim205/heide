@@ -11,7 +11,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -19,12 +24,11 @@
   <div class="wrap font-[Inter]">
     <header>
       <nav>
-        <div class="logo"></div>
         <ul class="mainMenu">
           <li><a href="">What's On</a></li>
           <li><a href="">Visit</a></li>
           <li><a href="">Explore</a></li>
-          <li><a href="">HEIDE</a></li>
+          <li class="logo"><a href="">HEIDE</a></li>
           <li><a href="">Learn</a></li>
           <li><a href="">Support</a></li>
           <li><a href="">Shop</a></li>
@@ -57,7 +61,7 @@
               <li><a href="">Landscape</a></li>
             </ul>
           </li>
-
+          <li></li>
           <li>
             <ul>
               <li><a href="">School programs</a></li>
@@ -65,6 +69,7 @@
               <li><a href="">Resources</a></li>
             </ul>
           </li>
+
           <li>
             <ul>
               <li><a href="">Donate</a></li>
@@ -73,20 +78,27 @@
               <li><a href="">Thank you</a></li>
             </ul>
           </li>
-
         </ul>
 
+        <span class="material-symbols-outlined btn">
+          search
+        </span>
       </nav>
     </header>
 
-    <section class="w-full h-screen relative box-border">
+    <section class="w-full h-screen relative box-border section1">
       <div class="absolute w-full h-[80vh] left-0 top-0 -z-10 overflow-hidden">
         <video autoplay muted loop class="w-full h-full object-cover">
           <source src="./images/bgVideo.webm" type="video/webm" />
         </video>
         <div class="introduce">
-          <div class="left"></div>
-          <div class="right"></div>
+          <div class="left">
+            <p>Heide is a public art museum and sculpture park located on a stretch of the Birrarung/Yarra River that has long served as a meeting point and as a creative hub.</p>
+          </div>
+          <div class="right">
+            <p>The museum is now closed
+              See our <a href="https://www.heide.com.au/plan-your-visit/" target="_blank">Visitor Information</a></p>
+          </div>
         </div>
       </div>
     </section>
