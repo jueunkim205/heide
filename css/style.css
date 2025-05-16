@@ -8,6 +8,11 @@ header hover시 submenu가 안뜸
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
+}
+
+body{
+  background: #fff;
 }
 
 /* 공통 */
@@ -37,6 +42,22 @@ img {
   box-sizing: border-box;
 }
 
+/* 마우스 */
+.cursor-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s ease;
+}
+
 
 /*************** HEADER ***************/
 
@@ -45,7 +66,7 @@ header {
   width: 100%;
   top: 0;
   transition: .3s;
-  z-index: 1000;
+  z-index: 100;
 }
 
 header a {
@@ -163,6 +184,11 @@ header nav .btn {
 }
 
 /* section1 */
+.section {
+  position: relative;
+  z-index: auto;
+}
+
 #section0 .wrap {
   height: 100vh;
 }
