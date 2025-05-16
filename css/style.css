@@ -24,7 +24,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 img {
@@ -47,6 +46,10 @@ header {
   top: 0;
   transition: .3s;
   z-index: 1000;
+}
+
+header a {
+  color: #fff;
 }
 
 header nav {
@@ -218,6 +221,7 @@ header nav .btn {
   background: var(--color-bg);
   line-height: 5rem;
   margin-top: 2rem;
+  color: #fff;
 }
 
 /* section1 */
@@ -229,19 +233,14 @@ header nav .btn {
   margin-bottom: 1rem;
 }
 
-#section1 .wrap .con a{
+#section1 .wrap .con a {
   padding: 2rem;
 }
 
-a {
-  width: 100%;
-  box-sizing: border-box;
-}
-
 #section1 .wrap .con1 a {
+  display: flex;
   background: #833529;
   width: 100%;
-  display: flex;
   height: 80vh;
   justify-content: space-between;
 }
@@ -253,26 +252,68 @@ a {
 }
 
 #section1 .wrap .con1 .desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  align-self: flex-end;
   font-size: 3.2rem;
   color: #fff;
 }
-#section1 .wrap .con1 .desc p:not(:first-of-type) {
-  color: #ffffff80;
+
+#section1 .wrap .desc p:not(:first-of-type) {
+  filter: opacity(0.6);
 }
 
-#section1 .wrap .con1 .desc p:last-of-type {
+#section1 .desc p:last-of-type {
   margin-top: 2rem;
 }
 
-.con2 {
+#section1 .wrap .con2 {
   display: flex;
-  height: 30vh;
-  overflow: hidden;
+  gap: 2rem;
+  margin: 2rem 0 0 20vw;
+  height: 60rem;
 }
 
-.con2 div a{
-  border: 1px solid #000;
+#section1 .wrap .con2 div a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#section1 .wrap .con2 .left {
+  width: 60%;
+  background: #65a5c9;
+}
+
+#section1 .wrap .con2 .left .conPic {
+  align-self: flex-end;
+  width: 80%;
+  height: 60%;
+}
+
+#section1 .wrap .con2 .left .desc {
+  font-size: 2.3rem;
+  color: #fff;
+}
+
+#section1 .wrap .con2 .right {
+  flex: 1;
+}
+
+#section1 .wrap .con2 .right a {
+  display: flex;
+  height: 70%;
+  padding: 0;
+}
+
+#section1 .wrap .con2 .right .conPic {
+  height: 70%;
+}
+
+#section1 .wrap .con2 .right .desc {
+  flex: 1;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--color-text);
 }
