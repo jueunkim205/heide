@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+    $('#fullpage').fullpage({
+      verticalCentered: true,
+      menu: '#menu',
+    });
+
+
   console.log("JS 연결됨");
 
   $('nav').mouseenter(function () {
