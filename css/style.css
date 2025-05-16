@@ -75,7 +75,7 @@ header .logo a {
   font-family: "Oswald", sans-serif;
 }
 
-header nav a {
+header nav a:not(.notice a) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +116,7 @@ header .subMenu>li a:hover {
 
 header .subMenuWrap .notice {
   display: flex;
-  justify-content: flex-end;
+  justify-content: right;
   gap: 10rem;
   padding: 1rem 10rem 1rem 0;
 }
@@ -124,6 +124,25 @@ header .subMenuWrap .notice {
 header .subMenuWrap .notice p {
   padding: .5rem 0;
   line-height: 1.3;
+}
+
+header .subMenuWrap .notice .right {
+  width: 21rem;
+}
+
+header .subMenuWrap .notice .right a {
+  display: flex;
+  gap: 1.3rem;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+header .subMenuWrap .notice .right a span {
+  transition: transform .3s;
+}
+
+header .subMenuWrap .notice .right a:hover span {
+  transform: translateX(.5rem);
 }
 
 header nav .btn {
@@ -150,6 +169,7 @@ header nav .btn {
 .section1 .introduce {
   display: flex;
   height: 20vh;
+  gap: 20rem;
   justify-content: space-between;
   padding: 0 9vw 0 20vw;
   align-items: center;
@@ -157,15 +177,17 @@ header nav .btn {
 
 .section1 .left {
   flex: 1;
+  font-size: 3.2rem;
+  word-break: keep-all;
+  letter-spacing: 1px;
 }
 
 .section1 .right {
-  width: 15%;
+  width: 20%;
 }
 
 .section1 .right p {
   font-size: 1.6rem;
-
 }
 
 .section1 .right p>a {
@@ -180,12 +202,14 @@ header nav .btn {
 
 /* 버튼 */
 .section1 .right>a {
-  display: block;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  font-size: 1.8rem;
+  width: 25rem;
   height: 5rem;
+  padding-left: 3.8rem;
   background: var(--color-bg);
-  text-align: center;
   line-height: 5rem;
-  font-size: 2rem;
   margin-top: 2rem;
 }
