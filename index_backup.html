@@ -6,21 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Heide</title>
-  <link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.css" />
   <link rel="stylesheet" href="./css/style.css">
   <!-- font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/c ss2?family=Material+Symbols+Outlined" rel="stylesheet">
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-  <script type="text/javascript" src="./js/scrolloverflow.js"></script>
   <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="./js/scrolloverflow.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,21 +28,12 @@
     });
   </script>
 
-  <style>
-    .myContent {
-      height: 300px;
-    }
-
-    .section {
-      border: 1px solid #000;
-    }
-  </style>
 
 </head>
 
 <body>
-
-  <div id="fullpage">
+  <!-- https://www.heide.com.au/ -->
+  <div class="wrap">
     <header>
       <nav>
         <ul class="mainMenu">
@@ -113,14 +101,14 @@
             </div>
             <div class="right">
               <p><a href="https://www.heide.com.au/membership/"><span class="material-symbols-outlined">
-                    arrow_forward
-                  </span>Become a member</a></p>
+                arrow_forward
+                </span>Become a member</a></p>
               <p><a href="https://www.heide.com.au/volunteer/"><span class="material-symbols-outlined">
-                    arrow_forward
-                  </span>Volunteer</a></p>
+                arrow_forward
+                </span>Volunteer</a></p>
               <p><a href="https://www.heide.com.au/donate/"><span class="material-symbols-outlined">
-                    arrow_forward
-                  </span>Donate</a></p>
+                arrow_forward
+                </span>Donate</a></p>
             </div>
           </div>
         </div>
@@ -131,8 +119,8 @@
       </nav>
     </header>
 
-    <div class="section" id="section0">
-      <div class="wrap">
+    <section class="w-full h-screen relative box-border section1">
+      <div class="absolute w-full left-0 top-0 -z-10 overflow-hidden wrap">
         <video autoplay muted loop class="w-full h-full object-cover h-[80vh]">
           <source src="./images/bgVideo.webm" type="video/webm" />
         </video>
@@ -148,31 +136,16 @@
             <a href="https://events.ticketbooth.com.au/event/exhibition-tickets">
               <span class="material-symbols-outlined">
                 arrow_forward
-              </span>Book Tickets</a>
+                </span>Book Tickets</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section" id="section1">
-      <div class="wrap">
-        <h1>Current Exhibitions</h1>
-        <div class="con con1">
-          <div class="desc">
-            <p>Blak In-Justice</p>
-            <p>Incarceration and Resilience</p>
-            <p>5 April – 20 July 2025</p>
-          </div>
-          <p><img src="./images/photo1.webp" alt=""></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section fp-auto-height" id="section2">
-      <h1>Section 3</h1>
-    </div>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
