@@ -11,7 +11,7 @@ header hover시 submenu가 안뜸
   cursor: none;
 }
 
-body{
+body {
   background: #fff;
 }
 
@@ -89,7 +89,7 @@ header .mainMenu {
   display: flex;
   width: 100%;
   padding: 0 10rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   height: 5rem;
   border-bottom: 1px solid rgba(204, 204, 204, 0.178);
 }

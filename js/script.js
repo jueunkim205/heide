@@ -18,7 +18,7 @@ $(document).ready(function () {
   // 🔽 a 태그에 마우스 올라갔을 때 커서 작아지기
   $("a").on("mouseenter", function () {
     $cursor.css({
-      transform: "translate(-50%, -50%) scale(0.7)", // 크기 줄이기
+      transform: "translate(-50%, -50%) scale(0.5)", // 크기 줄이기
       transition: "transform 0.2s ease" // 부드럽게
     });
   });
@@ -30,7 +30,7 @@ $(document).ready(function () {
       transition: "transform 0.2s ease"
     });
   });
-  
+
 
   // header
   $("nav").mouseenter(function () {
