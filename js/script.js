@@ -11,7 +11,7 @@ $(document).ready(function () {
   $(window).on("mousemove", function (e) {
     $cursor.css({
       top: e.clientY + "px",
-      left: e.clientX + "px"
+      left: e.clientX + "px",
     });
   });
 
@@ -19,7 +19,7 @@ $(document).ready(function () {
   $("a").on("mouseenter", function () {
     $cursor.css({
       transform: "translate(-50%, -50%) scale(0.5)", // 크기 줄이기
-      transition: "transform 0.2s ease" // 부드럽게
+      transition: "transform 0.2s ease", // 부드럽게
     });
   });
 
@@ -27,10 +27,9 @@ $(document).ready(function () {
   $("a").on("mouseleave", function () {
     $cursor.css({
       transform: "translate(-50%, -50%) scale(1)",
-      transition: "transform 0.2s ease"
+      transition: "transform 0.2s ease",
     });
   });
-
 
   // header
   $("nav").mouseenter(function () {
@@ -40,4 +39,16 @@ $(document).ready(function () {
   $("nav").mouseleave(function () {
     $(".subMenuWrap").stop().slideUp(500);
   });
+
+  // section2 owl slide
+  $(".owl-carousel").owlCarousel({
+    margin: 10,
+    loop: true,
+    autoWidth: true,
+    items: 4,
+    dots: false,
+  });
+
+
+  //끝
 });
