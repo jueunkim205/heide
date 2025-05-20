@@ -1,8 +1,24 @@
 $(document).ready(function () {
   /*********** fullpage효과 ***********/
   $("#fullpage").fullpage({
+    autoScrolling: true,
+    navigation: true,
     verticalCentered: true,
     menu: "#menu",
+
+    afterLoad: function (anchorLink, index) {
+      // section5 도달 → 애니메이션 실행
+      if (index === 5) {
+        $("#section5 .up p").addClass("animate");
+      }
+
+      // section1 도달 → section5 애니메이션 초기화
+      if (index < 4) {
+        const $text = $("#section5 .up p");
+        $text.removeClass("animate");
+        void $text[0].offsetWidth;
+      }
+    },
   });
 
   /*********** 마우스 ***********/
@@ -51,14 +67,16 @@ $(document).ready(function () {
   });
 
   /*********** section2 owl slide ***********/
-  $('#section4 .left li').eq(0).addClass('on');;
-  $('#section4 .right li').eq(0).show();
+  $("#section4 .left li").eq(0).addClass("on");
+  $("#section4 .right li").eq(0).show();
 
-  $('#section4 .left li').mouseenter(function(){
+  $("#section4 .left li").mouseenter(function () {
     const index = $(this).index();
-    $('#section4 .left li').removeClass('on');
-    $('#section4 .right li').hide();
-    $(this).addClass('on')
-    $('#section4 .right li').eq(index).show();
-  })
+    $("#section4 .left li").removeClass("on");
+    $("#section4 .right li").hide();
+    $(this).addClass("on");
+    $("#section4 .right li").eq(index).show();
+  });
+
+  /*********** 끝 ***********/
 });

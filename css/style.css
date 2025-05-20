@@ -36,7 +36,7 @@ img {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
   word-break: keep-all;
-  /* padding: 0 2rem; */
+  padding: 0 2rem;
 }
 
 .wrap h1,
@@ -434,7 +434,7 @@ header nav .btn {
   max-width: 30rem;
 }
 
-
+/************ section4 ************/
 #section4 {
   background: #f2f2f2;
 }
@@ -442,7 +442,6 @@ header nav .btn {
 #section4 .up {
   display: flex;
   height: 60rem;
-  margin: 10rem 2rem;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -455,21 +454,22 @@ header nav .btn {
 
 #section4 .left li {
   display: flex;
+  height: 13rem;
   align-items: center;
-  font-size: 9rem;
+  font-size: 10rem;
   overflow: hidden;
-  font-weight: 700;
   text-transform: uppercase;
-  padding: 1rem 0;
   color: #ccc;
   transition: color .3s;
 }
 
-#section4 .left li p{
-  line-height: 1.2;
+#section4 .left li p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: -.3rem;
 }
 
-#section4 .left li.on{
+#section4 .left li.on {
   color: #000;
 }
 
@@ -477,23 +477,49 @@ header nav .btn {
   transform: translateX(-20rem);
   font-size: 10rem;
   transition: .3s;
+  font-weight: 600;
+  padding-right: 1rem;
 }
 
 #section4 .left li:hover span {
   transform: translateX(0);
 }
 
-
-#section4 .right{
+#section4 .right {
   flex: 1;
   height: 60rem;
 }
 
-#section4 .right li{
+#section4 .right li {
   height: 100%;
 }
-#section4 .right li p{
+
+#section4 .right li p {
   height: 100%;
+}
+
+
+
+#section5 .wrap{
+  height: 500px;
+}
+#section5 .wrap div{
+  height: 100rem;
+}
+
+#section5 .up p {
+  margin: 0 auto;
+  font-weight: 800;
+  font-size: 20rem;
+  white-space: nowrap;
+  text-align: center;
+  transform: translateX(50%);
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+
+#section5 .up p.animate {
+  transform: translateX(0);
 }
 
 
