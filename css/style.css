@@ -1,9 +1,6 @@
 @charset "utf-8";
-/* 
-문제해결
-header hover시 submenu가 안뜸
-*/
 
+/*************** 공동 ***************/
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +11,6 @@ header hover시 submenu가 안뜸
 body {
   background: #fff;
 }
-
-/* 공통 */
 
 :root {
   font-size: 10px;
@@ -41,8 +36,15 @@ img {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
   word-break: keep-all;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 }
+
+.wrap h1,
+.wrap h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
 
 /* 마우스 */
 .cursor-effect {
@@ -196,12 +198,13 @@ header nav .btn {
   color: #fff;
 }
 
-/* section1 */
-.section {
+/* 뭔 코드야 */
+/* .section {
   position: relative;
   z-index: auto;
-}
+} */
 
+/************ section0 ************/
 #section0 video {
   width: 100%;
   height: 80vh;
@@ -214,7 +217,6 @@ header nav .btn {
   height: 20vh;
   gap: 20rem;
   justify-content: space-between;
-  /* padding: 0 9vw 0 20vw; */
   max-width: 1600px;
   margin: 0 auto;
   align-items: center;
@@ -261,14 +263,9 @@ header nav .btn {
   color: #fff;
 }
 
-/* section1 */
+/************ section1 ************/
 #section1 .wrap {
   padding: 2rem;
-}
-
-#section3 .wrap h1,
-#section1 .wrap h1 {
-  margin-bottom: 1rem;
 }
 
 #section1 .wrap .con a {
@@ -356,6 +353,7 @@ header nav .btn {
   color: var(--color-text);
 }
 
+/************ section2 ************/
 #section2 .con3 {
   display: flex;
   height: 300px;
@@ -390,12 +388,21 @@ header nav .btn {
 }
 
 
-
+/************ section3 ************/
 #section3 .owl-carousel {
   margin: 0 auto 10rem;
 }
 
+#section3 .owl-carousel .item {
+  transition: opacity .3s;
+}
+
+#section3 .owl-carousel .item:hover {
+  opacity: 80%;
+}
+
 #section3 .owl-carousel .item p:first-child {
+  /* 이미지 */
   width: 100%;
   height: 80%;
 }
@@ -404,6 +411,11 @@ header nav .btn {
   margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 300;
+}
+
+#section3 .owl-carousel .desc p:first-child {
+  color: var(--color-bg);
+  font-weight: 500;
 }
 
 #section3 .owl-carousel .desc p:not(:first-child) {
@@ -421,3 +433,67 @@ header nav .btn {
 #section3 .owl-carousel .owl-item:nth-child(even) .item {
   max-width: 30rem;
 }
+
+
+#section4 {
+  background: #f2f2f2;
+}
+
+#section4 .up {
+  display: flex;
+  height: 60rem;
+  margin: 10rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#section4 .left {
+  width: 60%;
+  padding-left: 7%;
+}
+
+#section4 .left li {
+  display: flex;
+  align-items: center;
+  font-size: 9rem;
+  overflow: hidden;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  color: #ccc;
+  transition: color .3s;
+}
+
+#section4 .left li p{
+  line-height: 1.2;
+}
+
+#section4 .left li.on{
+  color: #000;
+}
+
+#section4 .left li span {
+  transform: translateX(-20rem);
+  font-size: 10rem;
+  transition: .3s;
+}
+
+#section4 .left li:hover span {
+  transform: translateX(0);
+}
+
+
+#section4 .right{
+  flex: 1;
+  height: 60rem;
+}
+
+#section4 .right li{
+  height: 100%;
+}
+#section4 .right li p{
+  height: 100%;
+}
+
+

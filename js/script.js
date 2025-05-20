@@ -1,10 +1,11 @@
 $(document).ready(function () {
+  /*********** fullpage효과 ***********/
   $("#fullpage").fullpage({
     verticalCentered: true,
     menu: "#menu",
   });
 
-  // 마우스
+  /*********** 마우스 ***********/
   const $cursor = $(".cursor-effect");
 
   // 마우스 따라다니는 기본 동작
@@ -31,7 +32,7 @@ $(document).ready(function () {
     });
   });
 
-  // header
+  /*********** header ***********/
   $("nav").mouseenter(function () {
     $(".subMenuWrap").stop().slideDown(500);
   });
@@ -40,7 +41,7 @@ $(document).ready(function () {
     $(".subMenuWrap").stop().slideUp(500);
   });
 
-  // section2 owl slide
+  /*********** section2 owl slide ***********/
   $(".owl-carousel").owlCarousel({
     margin: 20,
     loop: true,
@@ -49,6 +50,15 @@ $(document).ready(function () {
     dots: false,
   });
 
+  /*********** section2 owl slide ***********/
+  $('#section4 .left li').eq(0).addClass('on');;
+  $('#section4 .right li').eq(0).show();
 
-  //끝
+  $('#section4 .left li').mouseenter(function(){
+    const index = $(this).index();
+    $('#section4 .left li').removeClass('on');
+    $('#section4 .right li').hide();
+    $(this).addClass('on')
+    $('#section4 .right li').eq(index).show();
+  })
 });
