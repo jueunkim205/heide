@@ -41,6 +41,7 @@ img {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
   word-break: keep-all;
+  padding: 0 2rem;
 }
 
 /* 마우스 */
@@ -169,14 +170,21 @@ header .subMenuWrap .notice .right a {
   text-align: left;
 }
 
+.btn {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 /* 화살표 움직임 */
 header .subMenuWrap .notice .right a span,
-#section0 .right .btn span {
+#section0 .right .btn span,
+#section2 .con3 .btn span {
   transition: transform .3s;
 }
 
 header .subMenuWrap .notice .right a:hover span,
-#section0 .right .btn:hover span {
+#section0 .right .btn:hover span,
+#section2 .con3 .btn:hover span {
   transform: translateX(.5rem);
 }
 
@@ -192,10 +200,6 @@ header nav .btn {
 .section {
   position: relative;
   z-index: auto;
-}
-
-#section0 .wrap {
-  height: 100vh;
 }
 
 #section0 video {
@@ -243,7 +247,7 @@ header nav .btn {
 
 /* 버튼 */
 #section0 .right .btn,
-.con3 li .btn {
+#section2 .con3 .btn {
   display: flex;
   align-items: center;
   gap: 1.3rem;
@@ -262,6 +266,7 @@ header nav .btn {
   padding: 2rem;
 }
 
+#section3 .wrap h1,
 #section1 .wrap h1 {
   margin-bottom: 1rem;
 }
@@ -351,33 +356,68 @@ header nav .btn {
   color: var(--color-text);
 }
 
-#section1 .con3{
-  border: 1px solid #000;
+#section2 .con3 {
   display: flex;
   height: 300px;
   max-width: 1600px;
-  margin: 10rem auto;
+  margin: 12rem auto;
   gap: 10vw;
 }
 
-#section1 .con3>li{
+#section2 .con3>li {
   width: calc((100% - 20vw) / 3);
   height: 100%;
+  letter-spacing: -.05rem;
 }
 
-#section1 .con3>li a:last-of-type{
+#section2 .con3>li a:last-of-type {
   background: #fff;
   color: #000;
   border: 1px solid #ddd;
 }
 
-#section1 .con3 ul>li{
+#section2 .con3 ul>li {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
-  color: var(--color-text)
+  font-weight: 300;
+  padding: .1rem 0;
+  color: var(--color-text);
 }
 
-#section1 .con3 ul>li:first-child{
-  color: var(--color-bg)
+#section2 .con3 ul>li:first-child {
+  color: var(--color-bg);
+}
+
+
+
+#section3 .owl-carousel {
+  margin: 0 auto 10rem;
+}
+
+#section3 .owl-carousel .item p:first-child {
+  width: 100%;
+  height: 80%;
+}
+
+#section3 .owl-carousel .desc {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#section3 .owl-carousel .desc p:not(:first-child) {
+  color: var(--color-text);
+}
+
+#section3 .owl-carousel .desc p:last-child {
+  margin-top: 2rem;
+}
+
+#section3 .owl-carousel .owl-item:nth-child(odd) .item {
+  max-width: 50rem;
+}
+
+#section3 .owl-carousel .owl-item:nth-child(even) .item {
+  max-width: 30rem;
 }

@@ -42,10 +42,10 @@ $(document).ready(function () {
 
   // section2 owl slide
   $(".owl-carousel").owlCarousel({
-    margin: 10,
+    margin: 20,
     loop: true,
     autoWidth: true,
-    items: 4,
+    items: 10,
     dots: false,
   });
 
