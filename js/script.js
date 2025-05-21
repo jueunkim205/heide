@@ -13,7 +13,7 @@ $(document).ready(function () {
       }
 
       // section1 도달 → section5 애니메이션 초기화
-      if (index < 4) {
+      if (index < 5) {
         const $text = $("#section5 .up p");
         $text.removeClass("animate");
         void $text[0].offsetWidth;
@@ -62,7 +62,7 @@ $(document).ready(function () {
     margin: 20,
     loop: true,
     autoWidth: true,
-    items: 10,
+    items: 7,
     dots: false,
   });
 

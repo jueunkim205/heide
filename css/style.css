@@ -62,6 +62,23 @@ img {
   transition: transform 0.2s ease;
 }
 
+/* 버튼 */
+/* #section0 .right .btn,
+#section2 .con3 .btn,
+#section5 .down .btn, */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  font-size: 1.8rem;
+  height: 5rem;
+  padding-left: 15%;
+  background: var(--color-bg);
+  line-height: 5rem;
+  margin-top: 2rem;
+  color: #fff;
+}
+
 
 /*************** HEADER ***************/
 
@@ -179,30 +196,22 @@ header .subMenuWrap .notice .right a {
 
 /* 화살표 움직임 */
 header .subMenuWrap .notice .right a span,
-#section0 .right .btn span,
-#section2 .con3 .btn span {
+.btn span {
   transition: transform .3s;
 }
 
 header .subMenuWrap .notice .right a:hover span,
-#section0 .right .btn:hover span,
-#section2 .con3 .btn:hover span {
+.btn:hover span {
   transform: translateX(.5rem);
 }
 
-header nav .btn {
+header nav .search {
   position: absolute;
   top: 1.5rem;
   right: 2rem;
   font-size: 2rem;
   color: #fff;
 }
-
-/* 뭔 코드야 */
-/* .section {
-  position: relative;
-  z-index: auto;
-} */
 
 /************ section0 ************/
 #section0 video {
@@ -247,21 +256,7 @@ header nav .btn {
   color: #000;
 }
 
-/* 버튼 */
-#section0 .right .btn,
-#section2 .con3 .btn {
-  display: flex;
-  align-items: center;
-  gap: 1.3rem;
-  font-size: 1.8rem;
-  width: 100%;
-  height: 5rem;
-  padding-left: 15%;
-  background: var(--color-bg);
-  line-height: 5rem;
-  margin-top: 2rem;
-  color: #fff;
-}
+
 
 /************ section1 ************/
 #section1 .wrap {
@@ -359,13 +354,17 @@ header nav .btn {
   height: 300px;
   max-width: 1600px;
   margin: 12rem auto;
-  gap: 10vw;
+  gap: 7vw;
 }
 
 #section2 .con3>li {
   width: calc((100% - 20vw) / 3);
   height: 100%;
   letter-spacing: -.05rem;
+}
+
+#section2 .con3>li:first-child {
+  padding-right: 4vw;
 }
 
 #section2 .con3>li a:last-of-type {
@@ -395,16 +394,18 @@ header nav .btn {
 
 #section3 .owl-carousel .item {
   transition: opacity .3s;
+  max-height: 50rem;
 }
 
 #section3 .owl-carousel .item:hover {
   opacity: 80%;
 }
 
-#section3 .owl-carousel .item p:first-child {
+#section3 .owl-carousel .item a>p {
   /* 이미지 */
   width: 100%;
-  height: 80%;
+  max-height: 35rem;
+  overflow: hidden;
 }
 
 #section3 .owl-carousel .desc {
@@ -431,7 +432,7 @@ header nav .btn {
 }
 
 #section3 .owl-carousel .owl-item:nth-child(even) .item {
-  max-width: 30rem;
+  max-width: 40rem;
 }
 
 /************ section4 ************/
@@ -499,16 +500,11 @@ header nav .btn {
 }
 
 
+/************ section5 ************/
 
-#section5 .wrap{
-  height: 500px;
-}
-#section5 .wrap div{
-  height: 100rem;
-}
 
 #section5 .up p {
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   font-weight: 800;
   font-size: 20rem;
   white-space: nowrap;
@@ -522,4 +518,29 @@ header nav .btn {
   transform: translateX(0);
 }
 
+#section5 .wrap{
+  padding: 0;
+  background: var(--color-bg);
+}
 
+#section5 .down{
+  color: #fff;
+  padding: 8rem 25vw;
+}
+
+#section5 .down p{
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+#section5 .down .btn{
+  width: 25rem;
+  padding-left: 3%;
+  margin-top: 5rem;
+  background: #fff;
+  color: #000;
+}
+
+#section5 .down p:first-of-type{
+  font-weight: 700;
+}
