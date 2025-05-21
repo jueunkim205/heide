@@ -78,5 +78,14 @@ $(document).ready(function () {
     $("#section4 .right li").eq(index).show();
   });
 
+  /*********** section6 figcaption ***********/
+  $("#section6 p")
+    .mouseenter(function () {
+      $("#section6 figcaption").addClass("on");
+    })
+    .mouseleave(function () {
+      $("#section6 figcaption").removeClass("on");
+    });
+
   /*********** 끝 ***********/
 });

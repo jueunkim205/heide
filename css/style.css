@@ -502,7 +502,6 @@ header nav .search {
 
 /************ section5 ************/
 
-
 #section5 .up p {
   margin: 0 auto 5rem;
   font-weight: 800;
@@ -518,22 +517,22 @@ header nav .search {
   transform: translateX(0);
 }
 
-#section5 .wrap{
+#section5 .wrap {
   padding: 0;
   background: var(--color-bg);
 }
 
-#section5 .down{
+#section5 .down {
   color: #fff;
   padding: 8rem 25vw;
 }
 
-#section5 .down p{
+#section5 .down p {
   font-size: 2rem;
   line-height: 1.5;
 }
 
-#section5 .down .btn{
+#section5 .down .btn {
   width: 25rem;
   padding-left: 3%;
   margin-top: 5rem;
@@ -541,6 +540,64 @@ header nav .search {
   color: #000;
 }
 
-#section5 .down p:first-of-type{
+#section5 .down p:first-of-type {
   font-weight: 700;
+}
+
+
+/************ section6 ************/
+#section6 .wrap {
+  padding: 3rem 2rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#section6 p {
+  width: 100%;
+  flex: 1;
+  /* height: 91%; */
+  overflow: hidden;
+}
+
+#section6 figcaption {
+  font-family: "Raleway", sans-serif;
+  margin: 1rem auto 0;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: .3s;
+  opacity: 0;
+}
+
+#section6 figcaption.on {
+  opacity: 1;
+}
+
+
+/************ footer ************/
+footer {
+  height: 80vh;
+  background: var(--color-bg);
+}
+
+footer>ul {
+  padding: 2rem;
+}
+
+footer .top li:first-of-type,
+footer .mid li:first-of-type {
+  width: 25%;
+}
+
+footer .top li:first-of-type p{
+  width: 100%;
+  height: 100%;
+}
+
+footer .top li:not(:first-of-type),
+footer .mid li:not(:first-of-type) {
+  flex: 1;
+  border: 1px solid #000;
 }
