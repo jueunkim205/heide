@@ -578,26 +578,19 @@ header nav .search {
 
 /************ footer ************/
 footer {
-  height: 80vh;
   background: var(--color-bg);
-  padding: 10rem 5rem;
-}
-
-footer ul {
-  display: flex;
-}
-
-footer ul li {
+  padding: 7rem 10rem;
 }
 
 footer .up {
-  padding-bottom: 3rem;
+  display: flex;
 }
 
 footer .up .left {
   width: 25%;
   border-right: 1px solid #3a3a3a;
-  padding-right: 3rem;
+  padding: 3rem 5rem 3rem 0;
+  box-sizing: border-box;
 }
 
 footer .up .left .footerlogo {
@@ -610,26 +603,32 @@ footer .up .left .footerlogo p {
 }
 
 footer .up .left .info {
-  margin: 5rem auto;
+  margin: 6.5rem auto 5rem;
   color: #fff;
   font-size: 1.2rem;
 }
 
 footer .up .left .info form {
   display: flex;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #aaa;
-  margin: 1rem 0;
+  margin: 2rem 0;
+  padding: 0 0.1rem;
+  border-bottom: 1px solid #555;
+  box-sizing: border-box;
 }
 
 footer .up .left .info input {
   background: none;
   flex: 1;
   border: none;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+footer .up .left .info input:focus {
+  outline: none;
 }
 
 footer .up .left .info button {
-  padding: 0 1rem;
   background: none;
   border: none;
   color: #fff;
@@ -644,14 +643,80 @@ footer .up .left .btn {
   transition: border .3s;
 }
 
-footer .up .left .btn span{
+footer .up .left .btn span {
   font-size: 1.7rem;
 }
 
-footer .up .left .btn:hover{
+footer .up .left .btn:hover {
   border: 1px solid #777;
 }
 
 footer .up .left .btn:nth-child(2) {
   margin: .5rem 0;
+}
+
+footer .up .right {
+  padding: 10rem 0 3rem 5rem;
+  color: #fff;
+  word-break: keep-all;
+}
+
+footer .up .right>p {
+  font-size: 1.5rem;
+  color: #ddd;
+}
+
+footer .up .right .infolist {
+  display: flex;
+  margin: 5rem 0 7.5rem;
+  justify-content: space-between;
+  color: #bbb;
+}
+
+footer .up .right .infolist a {
+  color: #bbb;
+}
+
+footer .up .right .infolist h3 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+footer .up .right .infolist ul li {
+  padding: .1rem 0;
+  font-size: 1.3rem;
+}
+
+footer .up .right .infolist .contact a {
+  text-decoration: underline;
+}
+
+footer .up .right .infolist .opening li {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+}
+footer .up .right .otherinfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .up .right .otherinfo li:first-of-type{
+  border: 1px solid #000;
+  display: flex;
+  gap: .2rem;
+}
+
+footer .up .right .otherinfo li:first-of-type a{
+  display: block;
+  height: 3rem;
+  padding: .5rem;
+}
+footer .up .right .otherinfo li:first-of-type a p{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+footer .up .right .otherinfo li:first-of-type a img{
 }
