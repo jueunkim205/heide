@@ -580,24 +580,78 @@ header nav .search {
 footer {
   height: 80vh;
   background: var(--color-bg);
+  padding: 10rem 5rem;
 }
 
-footer>ul {
-  padding: 2rem;
+footer ul {
+  display: flex;
 }
 
-footer .top li:first-of-type,
-footer .mid li:first-of-type {
+footer ul li {
+}
+
+footer .up {
+  padding-bottom: 3rem;
+}
+
+footer .up .left {
   width: 25%;
+  border-right: 1px solid #3a3a3a;
+  padding-right: 3rem;
 }
 
-footer .top li:first-of-type p {
-  width: 100%;
-  height: 100%;
+footer .up .left .footerlogo {
+  display: flex;
+  justify-content: flex-end;
 }
 
-footer .top li:not(:first-of-type),
-footer .mid li:not(:first-of-type) {
+footer .up .left .footerlogo p {
+  width: 55%;
+}
+
+footer .up .left .info {
+  margin: 5rem auto;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+footer .up .left .info form {
+  display: flex;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #aaa;
+  margin: 1rem 0;
+}
+
+footer .up .left .info input {
+  background: none;
   flex: 1;
-  border: 1px solid #000;
+  border: none;
+}
+
+footer .up .left .info button {
+  padding: 0 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+footer .up .left .btn {
+  padding: .5rem 2rem;
+  font-size: 1.2rem;
+  border: 1px solid #3a3a3a;
+  margin: 0;
+  font-weight: 444;
+  transition: border .3s;
+}
+
+footer .up .left .btn span{
+  font-size: 1.7rem;
+}
+
+footer .up .left .btn:hover{
+  border: 1px solid #777;
+}
+
+footer .up .left .btn:nth-child(2) {
+  margin: .5rem 0;
 }
