@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+/* header footer 공통사항 */
+
+/* 마우스 */
+.cursor-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s ease;
+}
+
+/*************** HEADER ***************/
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: .3s;
+  z-index: 100;
+}
+
+header a {
+  color: #fff;
+}
+
+header nav {
+  position: relative;
+  height: auto;
+  transition: .5s;
+  background-image: linear-gradient(rgba(64, 64, 64, 0.50), transparent);
+}
+
+header nav:hover {
+  background: var(--color-bg);
+}
+
+header .mainMenu {
+  display: flex;
+  width: 100%;
+  padding: 0 10rem;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  height: 5rem;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.178);
+}
+
+header .mainMenu li,
+header .subMenu>li {
+  width: calc(100% / 7);
+}
+
+header .logo a {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Oswald", sans-serif;
+}
+
+header nav a:not(.notice a) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+header .subMenuWrap {
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+header .subMenu {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 0 10rem 7rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.178);
+}
+
+header .subMenu>li {
+  margin: 1rem 0;
+}
+
+header .subMenu>li a {
+  padding: .5rem 0;
+  color: var(--color-text);
+  transition: .4s ease;
+}
+
+header .subMenu>li a:hover {
+  color: #fff;
+}
+
+header .subMenuWrap .notice {
+  display: flex;
+  justify-content: right;
+  gap: 10rem;
+  padding: 1rem 10rem 1rem 0;
+}
+
+header .subMenuWrap .notice p {
+  padding: .5rem 0;
+  line-height: 1.3;
+}
+
+header .subMenuWrap .notice .right {
+  width: 21rem;
+}
+
+header .subMenuWrap .notice .right a {
+  display: flex;
+  gap: 1.3rem;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.btn {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* 화살표 움직임 */
+header .subMenuWrap .notice .right a span,
+.btn span {
+  transition: transform .3s;
+}
+
+header .subMenuWrap .notice .right a:hover span,
+.btn:hover span {
+  transform: translateX(.5rem);
+}
+
+header nav .search {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+
+
+/************ footer ************/
+footer {
+  background: var(--color-bg);
+  padding: 7rem 10rem;
+}
+
+footer .wrap {
+  display: flex;
+  height: 60vh;
+}
+
+footer .wrap .left,
+footer .wrap .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .wrap .left {
+  width: 25%;
+  border-right: 1px solid #3a3a3a;
+  padding: 3rem 5rem 3rem 0;
+}
+
+footer .wrap .left .footerlogo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .wrap .left .footerlogo p {
+  width: 55%;
+}
+
+footer .wrap .left .info {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+footer .wrap .left .info form {
+  display: flex;
+  margin: 2rem 0;
+  padding: 0 0.1rem;
+  border-bottom: 1px solid #555;
+  box-sizing: border-box;
+}
+
+footer .wrap .left .info input {
+  background: none;
+  flex: 1;
+  border: none;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+footer .wrap .left .info input:focus {
+  outline: none;
+}
+
+footer .wrap .left .info button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+footer .wrap .left .btn {
+  padding: .5rem 2rem;
+  font-size: 1.2rem;
+  border: 1px solid #3a3a3a;
+  margin: 0;
+  font-weight: 400;
+  transition: border .3s;
+}
+
+footer .wrap .left .btn span {
+  font-size: 1.7rem;
+}
+
+footer .wrap .left .btn:hover {
+  border: 1px solid #777;
+}
+
+footer .wrap .left .btn:nth-child(2) {
+  margin: .5rem 0;
+}
+
+footer .wrap .right {
+  padding: 2.5rem 0 2.5rem 5rem;
+  word-break: keep-all;
+}
+
+footer .wrap .right>p {
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+footer .wrap .right .infolist {
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+  font-weight: 300;
+}
+
+footer .wrap .right .infolist a {
+  color: #aaa;
+}
+
+footer .wrap .right .infolist h3 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+footer .wrap .right .infolist ul li {
+  padding: .2rem 0;
+  font-size: 1.2rem;
+}
+
+footer .wrap .right .infolist .contact a {
+  text-decoration: underline;
+  transition: .3s;
+}
+
+footer .wrap .right .infolist .contact a:hover{
+  color: #fff;
+}
+
+footer .wrap .right .infolist .opening li {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+}
+
+footer .wrap .right .otherinfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #aaa;
+  border-top: 1px solid #3a3a3a;
+  padding-top: 3rem;
+}
+
+footer .wrap .right .otherinfo li:first-of-type {
+  display: flex;
+  gap: 1rem;
+  opacity: 50%;
+}
+
+footer .wrap .right .otherinfo li:first-of-type a {
+  display: block;
+  height: 2.5rem;
+  padding: .1rem;
+}
+
+footer .wrap .right .otherinfo li:first-of-type a p {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+footer .wrap .right .otherinfo li:nth-child(2){
+  display: flex;
+  gap: 1rem;
+}
+
+footer .wrap .right .otherinfo li:nth-child(2) a {
+  display: inline-block;
+  color: #aaa;
+  transition: .3s;
+  border-bottom: 1px solid transparent;
+}
+
+footer .wrap .right .otherinfo li:nth-child(2) a:hover{
+  color: #fff;
+  border-bottom: 1px solid #aaa;
+}
+
+
+/* 반응형 */
