@@ -216,7 +216,7 @@ img {
 /************ section2 ************/
 #section2 .con3 {
   display: flex;
-  height: 300px;
+  /* height: 300px; */
   max-width: 1600px;
   margin: 12rem auto;
   gap: 7vw;
@@ -459,6 +459,28 @@ img {
 
   #section1 .wrap .con2 .left .conPic {
     width: 100%;
+  }
+
+  #section2 .con3 {
+    width: 40rem;
+    height: 100vh;
+    padding: 5vw 0;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  #section2 .con3>li {
+    width: 100%;
+    max-height: 30%;
+  }
+  #section2 .con3>li:first-child{
+    padding: 0;
+    height: 20%;
+  }
+
+  #section2 .con3 .btn{
+    justify-content: center;
+    padding-left: 0;
   }
 }
 

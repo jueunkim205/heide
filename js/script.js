@@ -66,8 +66,9 @@ $(document).ready(function () {
     dots: false,
   });
 
-  /*********** section2 owl slide ***********/
+  /*********** section4 ***********/
   $("#section4 .left li").eq(0).addClass("on");
+  $("#section4 .right li").hide();
   $("#section4 .right li").eq(0).show();
 
   $("#section4 .left li").mouseenter(function () {
