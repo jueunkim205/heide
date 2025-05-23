@@ -89,7 +89,7 @@ img {
 #section0 .left {
   flex: 1;
   font-size: 1.7vw;
-  letter-spacing: 1px;
+  letter-spacing: -.5px;
 }
 
 #section0 .right {
