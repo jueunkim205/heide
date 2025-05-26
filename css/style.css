@@ -15,7 +15,8 @@ body {
 :root {
   font-size: 10px;
   --color-bg: #222;
-  --color-text: #646464;
+  /* --color-text: #646464; */
+  --color-text: #6e6e6e;
 }
 
 ul {
@@ -444,25 +445,7 @@ img {
 }
 
 
-
-@media screen and (max-width:1024px) {
-  :root {
-    font-size: 8px;
-  }
-
-  #section0 .right {
-    width: 30%;
-  }
-
-  #section1 .wrap .con1 a {
-    height: 50vh;
-  }
-
-  #section1 .wrap .con2 {
-    height: 40vh;
-    margin-left: 0;
-  }
-}
+/************ 반응형 ************/
 
 @media screen and (max-width:1148px) {
   #section1 .wrap .con a {
@@ -502,5 +485,24 @@ img {
   #section2 .con3 .btn {
     justify-content: center;
     padding-left: 0;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  :root {
+    font-size: 8px;
+  }
+
+  #section0 .right {
+    width: 30%;
+  }
+
+  #section1 .wrap .con1 a {
+    height: 50vh;
+  }
+
+  #section1 .wrap .con2 {
+    height: 40vh;
+    margin-left: 0;
   }
 }
