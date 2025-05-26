@@ -71,16 +71,17 @@ header .mainMenu li a {
 }
 
 .mOnly {
-  opacity: 0;
+ display: none !important;
 }
 
 header nav .menuIcons {
   position: absolute;
   right: 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 2rem;
-  width: 10rem;
+  width: auto;
+  padding: 0 2rem;
 }
 
 header .subMenuWrap {
@@ -346,6 +347,26 @@ footer .wrap .right .otherinfo li:nth-child(2) a:hover {
 
 /************ 반응형 ************/
 
-@media screen and (max-width:1148px) {}
+@media screen and (max-width:1148px) {
+  :root {
+    font-size: 8px;
+  }
 
-@media screen and (max-width:1024px) {}
+  header .mainMenu li{
+  }
+
+  header .mainMenu li:not(.logo, .menuIcons){
+    display: none;
+  }
+}
+
+@media screen and (max-width:980px) {
+  :root {
+    font-size: 8px;
+  }
+
+  .mOnly{
+   display: block !important;
+  }
+
+}

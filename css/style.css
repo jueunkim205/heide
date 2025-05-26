@@ -450,6 +450,7 @@ img {
 @media screen and (max-width:1148px) {
   #section1 .wrap .con a {
     flex-direction: column-reverse;
+    transition: .3s;
   }
 
   #section1 .wrap .conPic {
@@ -488,7 +489,7 @@ img {
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
   :root {
     font-size: 8px;
   }
@@ -498,7 +499,7 @@ img {
   }
 
   #section1 .wrap .con1 a {
-    height: 50vh;
+    /* height: 50vh; */
   }
 
   #section1 .wrap .con2 {
