@@ -30,7 +30,6 @@ header {
 
 
 header nav {
-  position: relative;
   height: auto;
   transition: .5s;
   background-image: linear-gradient(rgba(64, 64, 64, 0.50), transparent);
@@ -41,9 +40,10 @@ header nav:hover {
 }
 
 header .mainMenu {
+  position: relative;
   display: flex;
   width: 100%;
-  padding: 0 10rem;
+  padding: 0 18rem;
   margin: 0 auto;
   font-size: 1.8rem;
   height: 5rem;
@@ -61,18 +61,26 @@ header .logo a {
   font-family: "Oswald", sans-serif;
 }
 
-header .mainMenu li a {
-  display: flex;
-  justify-content: center;
-}
-
-header .mainMenu li p,
+header .mainMenu li,
 header .mainMenu li a {
   text-align: center;
   line-height: 5rem;
   width: 100%;
   height: 100%;
   color: #fff;
+}
+
+.mOnly {
+  opacity: 0;
+}
+
+header nav .menuIcons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 10rem;
 }
 
 header .subMenuWrap {
@@ -87,7 +95,7 @@ header .subMenu {
   width: 100%;
   display: flex;
   font-size: 1.5rem;
-  padding: 0 10rem 7rem;
+  padding: 0 18rem 7rem;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(204, 204, 204, 0.178);
 }
@@ -98,6 +106,7 @@ header .subMenu>li {
 }
 
 header .subMenu>li a {
+  display: block;
   padding: .5rem 0;
   color: var(--color-text);
   transition: .4s ease;
@@ -110,14 +119,15 @@ header .subMenu>li a:hover {
 header .subMenuWrap .notice {
   display: flex;
   justify-content: right;
-  gap: 10rem;
-  padding: 1rem 10rem 1rem 0;
+  gap: 4rem;
+  padding: 1rem 16rem 1rem 0
 }
 
 header .subMenuWrap .notice p {
   padding: .5rem 0;
-  line-height: 1.3;
+  line-height: 1.5;
   color: #aaa;
+  font-size: 1.3rem;
 }
 
 header .subMenuWrap .notice .right {
@@ -127,13 +137,13 @@ header .subMenuWrap .notice .right {
 header .subMenuWrap .notice .right a {
   display: flex;
   gap: 1.3rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: left;
   transition: color .3s;
   color: #aaa;
 }
 
-header .subMenuWrap .notice .right  a:hover{
+header .subMenuWrap .notice .right a:hover {
   color: #eee;
 }
 
@@ -152,14 +162,6 @@ header .subMenuWrap .notice .right a span,
 header .subMenuWrap .notice .right a:hover span,
 .btn:hover span {
   transform: translateX(.5rem);
-}
-
-header nav .search {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  font-size: 2rem;
-  color: #fff;
 }
 
 
