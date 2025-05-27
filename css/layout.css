@@ -293,6 +293,17 @@ footer .wrap .right .infolist ul li {
   font-size: 1.2rem;
 }
 
+footer .wrap .right .infolist ul li a {
+  transition: .3s;
+  border-bottom: 1px solid transparent;
+}
+
+footer .wrap .right .infolist ul li a:hover,
+footer .wrap .right .otherinfo li:nth-child(2) a:hover {
+  color: #fff;
+  border-bottom: 1px solid #aaa;
+}
+
 footer .wrap .right .infolist .contact a {
   text-decoration: underline;
   transition: .3s;
@@ -348,10 +359,6 @@ footer .wrap .right .otherinfo li:nth-child(2) a {
   border-bottom: 1px solid transparent;
 }
 
-footer .wrap .right .otherinfo li:nth-child(2) a:hover {
-  color: #fff;
-  border-bottom: 1px solid #aaa;
-}
 
 
 /************ 반응형 ************/
@@ -388,7 +395,7 @@ footer .wrap .right .otherinfo li:nth-child(2) a:hover {
   }
 
   footer .wrap {
-    height: auto;
+    height: 50vh;
   }
 
   footer .wrap .left .footerlogo {
@@ -435,23 +442,23 @@ footer .wrap .right .otherinfo li:nth-child(2) a:hover {
     display: none;
   }
 
-footer .infolist h3 span:first-of-type {
-  display: inline-block;
+  footer .infolist h3 span:first-of-type {
+    display: inline-block;
+  }
+
+  footer .infolist h3.on span:first-of-type {
+    display: none;
+  }
+
+  footer .infolist h3.on span:last-of-type {
+    display: inline-block;
+  }
+
 }
 
-footer .infolist h3.on span:first-of-type {
-  display: none;
-}
-
-footer .infolist h3.on span:last-of-type {
-  display: inline-block;
-}
-
-}
-
-@media screen and (max-width:480px) {
+@media screen and (max-width:580px) {
   footer .wrap {
-    background: red;
+    height: auto;
     flex-direction: column;
   }
 
@@ -465,20 +472,36 @@ footer .infolist h3.on span:last-of-type {
 
   footer .wrap .left .info {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
+  footer .wrap .right,
   footer .wrap .left {
     width: 100%;
-    padding: 3rem 2rem 3rem 0;
-    border-right: none;
+    padding: 0;
+    padding-top: 3rem;
   }
 
   footer .wrap .left .btn {
-    margin-top: 2rem;
     font-size: 1.5rem;
+  }
 
+  footer .wrap .right .otherinfo {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  footer .wrap .right .infolist ul {
+    text-align: center;
+  }
+
+  footer .wrap .right .infolist .opening li {
+    width: 50%;
+    margin: 0 auto;
   }
 }
+
+
 
 @media (hover: hover) and (pointer: fine) {
   header nav:hover {
