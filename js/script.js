@@ -1,61 +1,112 @@
 $(document).ready(function () {
   /*********** fullpage효과 ***********/
-  $("#fullpage").fullpage({
-    autoScrolling: true,
-    navigation: true,
-    verticalCentered: true,
-    menu: "#menu",
+  function initFullpage() {
+    $("#fullpage").fullpage({
+      autoScrolling: true,
+      navigation: true,
+      verticalCentered: true,
+      menu: "#menu",
 
-    afterLoad: function (anchorLink, index) {
-      // section5 도달 → 애니메이션 실행
-      if (index === 5) {
-        $("#section5 .up p").addClass("animate");
+      afterLoad: function (anchorLink, index) {
+        const winWidth = $(window).width(); // 현재 브라우저 너비
+
+        if (winWidth > 980) {
+          // ✅ 여기 안에서만 애니메이션 실행!
+          if (index === 5) {
+            $("#section5 .up p").addClass("animate");
+          }
+
+          if (index < 5) {
+            const $text = $("#section5 .up p");
+            $text.removeClass("animate");
+            void $text[0].offsetWidth;
+          }
+        }
+      },
+    });
+  }
+
+  function toggleFullpage() {
+    const winWidth = $(window).width();
+
+    if (winWidth > 1024) {
+      if (!$("#fullpage").hasClass("fullpage-enabled")) {
+        $("#fullpage").addClass("fullpage-enabled");
+        initFullpage(); // ✅ jQuery 방식 초기화
       }
-
-      // section1 도달 → section5 애니메이션 초기화
-      if (index < 5) {
-        const $text = $("#section5 .up p");
-        $text.removeClass("animate");
-        void $text[0].offsetWidth;
+    } else {
+      if ($("#fullpage").hasClass("fullpage-enabled")) {
+        // ✅ jQuery 방식 destroy
+        $.fn.fullpage.destroy("all");
+        $("#fullpage").removeClass("fullpage-enabled");
       }
-    },
+    }
+  }
+
+  $(window).on("load resize", function () {
+    toggleFullpage();
   });
 
-  /*********** 마우스 ***********/
-  const $cursor = $(".cursor-effect");
+  /*********** 마우스, nav ***********/
+  function handleResponsiveUI() {
+    const winWidth = $(window).width();
 
-  // 마우스 따라다니는 기본 동작
-  $(window).on("mousemove", function (e) {
-    $cursor.css({
-      top: e.clientY + "px",
-      left: e.clientX + "px",
-    });
-  });
+    if (winWidth > 980) {
+      // ✅ 데스크탑 환경
 
-  // 🔽 a 태그에 마우스 올라갔을 때 커서 작아지기
-  $("a").on("mouseenter", function () {
-    $cursor.css({
-      transform: "translate(-50%, -50%) scale(0.5)", // 크기 줄이기
-      transition: "transform 0.2s ease", // 부드럽게
-    });
-  });
+      // === 커서 효과 활성화 ===
+      const $cursor = $(".cursor-effect");
+      $cursor.show(); // 혹시 숨겨졌던 경우 보이게
 
-  // 🔼 a 태그에서 마우스 나갔을 때 다시 원래 크기로
-  $("a").on("mouseleave", function () {
-    $cursor.css({
-      transform: "translate(-50%, -50%) scale(1)",
-      transition: "transform 0.2s ease",
-    });
-  });
+      // 기존 이벤트 제거 (중복 방지)
+      $(window).off(".cursor");
+      $("a").off(".cursor");
 
-  /*********** header ***********/
-  $("nav").mouseenter(function () {
-    $(".subMenuWrap").stop().slideDown(500);
-  });
+      $(window).on("mousemove.cursor", function (e) {
+        $cursor.css({
+          top: e.clientY + "px",
+          left: e.clientX + "px",
+        });
+      });
 
-  $("nav").mouseleave(function () {
-    $(".subMenuWrap").stop().slideUp(500);
-  });
+      $("a").on("mouseenter.cursor", function () {
+        $cursor.css({
+          transform: "translate(-50%, -50%) scale(0.5)",
+          transition: "transform 0.2s ease",
+        });
+      });
+
+      $("a").on("mouseleave.cursor", function () {
+        $cursor.css({
+          transform: "translate(-50%, -50%) scale(1)",
+          transition: "transform 0.2s ease",
+        });
+      });
+
+      // === 메뉴 hover 이벤트 활성화 ===
+      $("nav").off(".menu"); // 중복 방지
+      $("nav").on("mouseenter.menu", function () {
+        $(".subMenuWrap").stop().slideDown(500);
+      });
+      $("nav").on("mouseleave.menu", function () {
+        $(".subMenuWrap").stop().slideUp(500);
+      });
+    } else {
+      // ❌ 모바일 환경
+
+      // === 커서 효과 제거 ===
+      $(".cursor-effect").hide();
+      $(window).off(".cursor");
+      $("a").off(".cursor");
+
+      // === 메뉴 hover 제거 ===
+      $("nav").off(".menu");
+      $(".subMenuWrap").hide(); // 혹시 열려 있으면 닫기
+    }
+  }
+
+  // ✅ 페이지 로드 & 리사이즈 시 실행
+  $(window).on("load resize", handleResponsiveUI);
 
   /*********** section2 owl slide ***********/
   $(".owl-carousel").owlCarousel({

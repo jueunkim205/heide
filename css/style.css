@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
+
 }
 
 body {
@@ -58,6 +58,7 @@ img {
   line-height: 5rem;
   margin-top: 2rem;
   color: #fff;
+  cursor: pointer;
 }
 
 
@@ -65,7 +66,7 @@ img {
 
 #section0 {
   height: 100vh;
-  display: flex;
+  /* display: flex; */
 }
 
 #section0 video {
@@ -325,8 +326,6 @@ img {
   height: 13rem;
   align-items: center;
   font-size: 6.5vw;
-  /* 최소, 기본, 최대 */
-  /* font-size: clamp(8vw, 10vw, 2.5rem); */
   overflow: hidden;
   text-transform: uppercase;
   color: #ccc;
@@ -337,6 +336,7 @@ img {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   letter-spacing: -.3rem;
+  cursor: pointer;
 }
 
 #section4 .left li.on {
@@ -494,16 +494,60 @@ img {
     font-size: 8px;
   }
 
-  #section0 .right {
-    width: 30%;
+  #section0 video {
+    height: 75vh;
   }
 
-  #section1 .wrap .con1 a {
-    /* height: 50vh; */
+  #section0 .introduce {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #section0 .left {
+    font-size: 1.5rem
+  }
+
+  #section0 .right {
+    width: 50%;
+  }
+
+  #section0 .right .btn{
+    width: 100%;
   }
 
   #section1 .wrap .con2 {
     height: 40vh;
     margin-left: 0;
+  }
+
+  #section5 .up p {
+    transform: translateX(0);
+  }
+
+  #section5 .down{
+    margin: 0 auto;
+    text-align: center;
+    padding: 8rem 20vw;
+  }
+
+  #section5 .down .btn{
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #section6 .wrap {
+    height: 60vh;
+  }
+
+  #section6 p {
+    height: 50vh;
+  }
+
+  #section6 figcaption {
+    padding-left:10rem;
+    opacity: 1;
+    text-align: left;
+    font-size: 1.4rem;
   }
 }
