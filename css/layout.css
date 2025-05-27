@@ -87,7 +87,7 @@ header nav .menuIcons {
   padding: 0 2rem;
 }
 
-header nav .menuIcons  span{
+header nav .menuIcons span {
   cursor: pointer;
 }
 
@@ -377,10 +377,36 @@ footer .wrap .right .otherinfo li:nth-child(2) a:hover {
     cursor: auto;
   }
 
+  footer {
+    padding: 1rem;
+  }
+
+  footer .wrap {
+    flex-direction: column;
+    height: auto;
+  }
+
+  footer .wrap .left .info {
+    font-size: 1.5rem;
+  }
+
+  footer .wrap .left {
+    width: 100%;
+    padding: 3rem 2rem 3rem 0;
+    border-right: none;
+  }
+
+  footer .wrap .left .btn {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+  }
+
 }
 
-@media (hover: hover) and (pointer: fine) {
-  header nav:hover {
-    background: var(--color-bg);
+
+  @media (hover: hover) and (pointer: fine) {
+    header nav:hover {
+      background: var(--color-bg);
+    }
   }
-}
