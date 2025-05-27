@@ -101,7 +101,24 @@ $(document).ready(function () {
 
       // === 메뉴 hover 제거 ===
       $("nav").off(".menu");
-      $(".subMenuWrap").hide(); // 혹시 열려 있으면 닫기
+      $(".subMenuWrap").hide();
+
+      // footer
+      $("footer .infolist h3").click(function () {
+        const $targetUl = $(this).siblings("ul");
+        const isOpen = $targetUl.hasClass("on");
+      
+        // 전체 초기화
+        $("footer .infolist ul").slideUp(300).removeClass("on");
+        $("footer .infolist h3").removeClass("on");
+      
+        if (!isOpen) {
+          // 열기
+          $targetUl.slideDown(300).addClass("on");
+          $(this).addClass("on"); // 아이콘 전환용
+        }
+      });
+      
     }
   }
 
