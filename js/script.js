@@ -91,9 +91,9 @@ $(document).ready(function () {
       $("nav").on("mouseleave.menu", function () {
         $(".subMenuWrap").stop().slideUp(500);
       });
-    } else {
-      // ❌ 모바일 환경
 
+      $("footer .infolist h3").off("click");
+    } else {
       // === 커서 효과 제거 ===
       $(".cursor-effect").hide();
       $(window).off(".cursor");
@@ -107,18 +107,18 @@ $(document).ready(function () {
       $("footer .infolist h3").click(function () {
         const $targetUl = $(this).siblings("ul");
         const isOpen = $targetUl.hasClass("on");
-      
+
         // 전체 초기화
-        $("footer .infolist ul").slideUp(300).removeClass("on");
+        $("footer .infolist ul").stop().slideUp(300).removeClass("on");
         $("footer .infolist h3").removeClass("on");
-      
+
         if (!isOpen) {
           // 열기
-          $targetUl.slideDown(300).addClass("on");
+          $targetUl.stop().slideDown(300).addClass("on");
           $(this).addClass("on"); // 아이콘 전환용
         }
       });
-      
+
     }
   }
 
