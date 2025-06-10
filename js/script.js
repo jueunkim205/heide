@@ -92,7 +92,14 @@ $(document).ready(function () {
         $(".subMenuWrap").stop().slideUp(500);
       });
 
+      // 화면 크기 변경 시 항상 footer 상태 초기화
       $("footer .infolist h3").off("click");
+      $("footer .infolist ul")
+        .stop()
+        .removeClass("on")
+        .removeAttr("style"); // jQuery로 적용된 모든 스타일 제거
+      $("footer .infolist h3").removeClass("on");
+
     } else {
       // === 커서 효과 제거 ===
       $(".cursor-effect").hide();
@@ -104,7 +111,10 @@ $(document).ready(function () {
       $(".subMenuWrap").hide();
 
       // footer
-      $("footer .infolist h3").click(function () {
+      $("footer .infolist h3").on("click", function (e) {
+        // 터치/클릭 영역 확장을 위해 전체 h3 영역에서 클릭 감지
+        e.preventDefault();
+
         const $targetUl = $(this).siblings("ul");
         const isOpen = $targetUl.hasClass("on");
 
